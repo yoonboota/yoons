@@ -1,0 +1,429 @@
+@charset "utf-8";
+
+/*기초셋팅 ********************************************************수정안됨하지마*/
+
+body,h1,h2,h3,h4,h5,h6,p{
+	margin:0;
+}
+
+a{
+	text-decoration:none;
+}
+
+ul{
+	margin:0;
+	padding:0;
+	list-style:none;
+	
+}
+
+.cf:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.inner{
+	width:940px;
+	margin:0 auto;
+}
+
+
+
+
+/*전체시작*/
+
+#wrap{
+	width:100%;
+}
+
+
+/*헤더시작*/
+
+#header{}
+#header .inner{
+	position: relative;
+}
+#header h1{
+	text-align: center;
+	padding:70px 0;
+}
+#header h1 a{}
+#header h1 img{}
+
+
+
+.utill{
+	position: absolute;
+}
+.utillL{
+	left:0;
+}
+.utillL li{
+	float: left;
+}
+
+.utillL li:last-child a{
+	padding-top:20px;
+	display:block;
+	height:76px;
+	padding-left:20px;
+	}
+.utillL li a{}
+.utillL li img{}
+
+
+.utillR{
+	right:0;
+	top:20px;
+}
+.utillR li{
+	float:left;
+}
+
+.utillR li:before{
+	content:"";
+	display:inline-block;
+	vertical-align: middle;
+	width:1px;
+	height:8px;
+	color:#333;
+	margin:0 5px;
+}
+
+.utillR li:first-child:before{
+	display: none;
+}
+
+.utillR li a{
+	vertical-align: middle;
+}
+.utillR li img{}
+
+
+.gnb{
+	text-align:center;
+	padding:20px 0;
+	border-bottom:2px solid #86296B;
+}
+.gnb li{
+	padding:15px 30px;
+	display:inline-block;	
+	position:relative;
+
+}
+
+.gnb img{
+	display:block;
+}
+.gnb li a{}
+.gnb li img{}
+
+.gnb li .on{
+	display:none;
+}
+
+.gnb li:hover .on{
+	display:block;	
+}
+
+.gnb li:hover .off{
+	display:none;
+}
+
+.gnb li:hover .lnb{
+	display: block;
+}
+
+
+/*서브메뉴*/
+.lnb{
+	position:absolute;
+	z-index:1;                      /*밑에무엇이 있던간에 내가바로1등이다 다른것들은 0으로되어잇음*/
+	background:#fff;
+	width:100%;
+	left:0;	
+	line-height:30px;
+	display: none;                 /*자리잡아놓고 안보이게 만들어야지 편함*/
+	
+	
+}
+
+.lnb li{
+	padding:0;
+	display:block;
+}
+
+.lnb a{
+	color:#555;
+}
+.lnb li:hover{
+	font-weight: bold;
+	background: #ddd;
+	
+}
+/*컨테이너*/
+
+#container{}
+
+.mainSlider{
+	height:480px;
+	position:relative;
+	overflow: hidden;                    /*스크롤사라지고 정중앙으로 배치*/
+}
+.mainSlider img{
+	position:absolute;
+	left:50%;
+	margin-left:-960px; 
+}
+
+
+
+/*메인콘텐츠 mainCon01*/
+
+.mainConWrap{}
+
+.mainCon01{
+	padding:50px 0;
+}
+
+
+.con01{
+	width:205px;
+	margin-right:35px;
+	float:left;
+}
+
+.con01 h3{}
+
+
+.franchise{}
+
+.franchise a{}
+
+.franchise img{}
+
+
+.mall{
+	width:405px;
+}
+.mall p{
+	font-size:13px;
+	color:#555;
+	margin:10px 0;
+}
+.mallMenu{}
+.mallMenu li{
+	float:left;
+	text-align:center;
+	width:130px;
+	
+}
+.mallMenu a{
+	display:block;
+	font-size:13px;
+	color:#555;
+	padding:20px 0;
+	background:url(../images/mall_bar01.gif) no-repeat left center;
+
+}
+
+.mallMenu li:first-child a{
+	background:none;                   /*상속개념. 몰메뉴안의 li안의 a태그의 첫번째 자식을 지워야함*/
+}
+
+.mallMenu img{
+	display:block;
+	margin:0 auto;   /*이미지가 지금 블락이기때문에 텍스트얼라인 안먹음. 그래서 마진 0 오토로 중앙정렬가능함*/
+}
+
+.store{
+	margin-right:0;
+}
+.store a{}
+.store img{}
+
+/*메인컨텐츠배너영역*/
+
+
+.mainCon02{
+	font-size:0;
+}
+
+
+.mainCon02 a{
+	display: inline-block;
+}
+
+
+/*mainCon03 뉴스 및 빠른메뉴*/
+
+.mainCon03{
+	padding:50px 0;
+	border-bottom:2px solid firebrick;
+	margin-bottom:30px;                      /*밑에 박스를 더밀어내려고 마진바텀 줌*/
+}
+.con03{
+	float:left;
+	width:205px;
+	margin-right:35px;
+	font-size:12px;
+	color:#555;
+}
+.com03 a{
+	color:#555;
+}
+.con03 h3{}
+.con03 p{
+	margin:15px 0;
+}
+.con03 img{}
+.con03 span{
+	vertical-align:middle;              
+}
+
+
+.news{}
+.news h3{}
+.news h3 a{}
+.news h3 img{}
+.news ul{
+	margin-top:15px;
+	line-height:18px;
+}
+.news li{
+	position: relative;
+}
+.news li a{
+	width:150px;
+	display:inline-block;
+	white-space:nowrap;                  /*1줄이상의 글을 무조건 1줄로 만들어버림*/
+	overflow:hidden;
+	text-overflow: ellipsis;            /*자동으로 점처리  -가로값없으면 안먹음 기준값이잇어야함*/
+}
+
+.news li span{
+	position:absolute;
+	right:0;
+	
+}
+
+.quickMenu{
+	margin-right:0;
+	text-align: center;
+}
+.quickMenu a{
+	display:inline-block;
+	padding:0 3px;
+}
+.quickMenu img{
+	display:block;
+	margin:0 auto;
+}
+
+
+
+/*할리스라이브*/
+
+.mainCon04{}
+.mainCon04 h2,.snsBtn{
+	display:inline-block;
+	vertical-align:middle;
+}
+
+.snsBtn{
+
+}
+.snsBtn li{
+	float:left;
+	margin-right:5px;
+}
+.snsBtn a{}
+.snsBtn img{
+	display:block;
+}
+
+
+.con04{
+	margin-top:20px;
+	
+}
+.con04 li{
+	float:left;
+	width:205px;
+	margin-right:35px; 
+	background:url(../images/48_48.png) no-repeat left center;
+	padding-left:50px;
+	box-sizing: border-box; 								 /*패딩값도 내 가로값에 포함시키라고 주는거*/
+	
+}
+
+.con04 li:last-child{
+	margin-right:0; 
+}
+.con04 a{
+	font-size:13px;
+	color:#555;
+}
+.con04 p{
+	color:#36f;
+}
+
+
+
+/*footer start*/
+
+#footer{
+	background:url(../images/bg_footer.gif);
+	padding:50px 0;
+	margin-top:80px;
+	
+}
+
+.fMenu{}
+.fMenu li{	
+	float:left;
+	
+}
+
+.fMenu li:after{
+	content:"";
+	display:inline-block;
+	width:1px;
+	height:8px;
+	background:#fff;
+	margin:0 3px;
+}
+
+.fMenu li:last-child:after{
+	display:none;
+}
+
+.fMenu a{
+	color:#fff;
+	vertical-align:middle;
+
+}
+
+
+
+.fMenu li:first-child{
+	display:none;}
+
+
+
+.fMenu li:first-child{
+	display:none;
+}
+
+.fInfo{
+	color:#de898e;
+	font-size:11px;
+	margin-top:15px;
+}
+
+
+
+
+
+
